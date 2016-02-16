@@ -5,17 +5,23 @@ import processing.core.PApplet;
 public class Sketch extends PApplet {
     @Override
     public void settings() {
-        //Call size/fullscreen from here
-        size(1000, 1000, P2D);
+        fullScreen();
     }
 
     @Override
     public void setup() {
-        //Initialize one time stuffs here
     }
 
     @Override
     public void draw() {
-        //Finally draw from here
+        background(0);
+        if (mousePressed) {
+            pen(120);
+        }
+    }
+
+    private void pen(int size) {
+        fill(random(255), random(255), random(255));
+        ellipse(mouseX, mouseY, size, size);
     }
 }
