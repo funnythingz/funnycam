@@ -68,4 +68,10 @@ public class Sketch extends PApplet {
         stroke(random(255), random(255), random(255));
         rect((wpx * 9) - 1, (hpx * 15) - 1, wpx, hpx);
     }
+
+    @Override
+    public void mouseReleased() {
+        super.mouseReleased();
+        selectBackgroundColor(BackgroundColor.BLACK);
+    }
 }
